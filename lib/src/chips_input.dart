@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 import 'suggestions_box_controller.dart';
 import 'text_cursor.dart';
 
-typedef ChipsInputSuggestions<T> = FutureOr<List<T>> Function(String query);
+typedef ChipsInputSuggestions<T> = FutureOr<List<T>> Function(String query,ChipsInputState<T> state);
 typedef ChipSelected<T> = void Function(T data, bool selected);
 typedef ChipsBuilder<T> = Widget Function(
     BuildContext context, ChipsInputState<T> state, T data);
