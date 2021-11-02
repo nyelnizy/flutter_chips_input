@@ -301,7 +301,7 @@ class ChipsInputState<T> extends State<ChipsInput<T>>
 
   void _onSearchChanged(String value) async {
     final localId = ++_searchId;
-    final results = await widget.findSuggestions(value);
+    final results = await widget.findSuggestions(value,this);
     if (_searchId == localId && mounted) {
       _suggestions =
           results.where((r) => !_chips.contains(r)).toList(growable: false);
